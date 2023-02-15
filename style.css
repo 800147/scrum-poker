@@ -1,0 +1,81 @@
+body, :root {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+.Root {
+  font-family: sans-serif;
+  --cols: 4;
+}
+.Card {
+  user-select: none;
+  --gap: 0.2;
+  --gap-absolute: calc((100vmin / (var(--cols) + var(--gap) * (var(--cols) + 1))) * var(--gap));
+  background-color: #333;
+  border-radius: calc(var(--gap-absolute) / 2);
+  position: absolute;
+  --width: calc(100vw / (var(--cols) + var(--gap) * (var(--cols) + 1)));
+  --height: calc(100vh / (var(--cols) + var(--gap) * (var(--cols) + 1)));
+  width: var(--width);
+  height: var(--height);
+  top: calc(
+    (100vh - var(--height) * var(--cols) - var(--gap-absolute) * (var(--cols) + 1)) / 2 +
+    (var(--height) + var(--gap-absolute)) * var(--row) + var(--gap-absolute)
+  );
+  left: calc(
+    (100vw - var(--width) * var(--cols) - var(--gap-absolute) * (var(--cols) + 1)) / 2 +
+    (var(--width) + var(--gap-absolute)) * var(--col) + var(--gap-absolute)
+  );
+  opacity: 1;
+  transition: all 1s;
+  transform: perspective(500px) translate3d(0, 0, 0);
+}
+[data-state='1'] .Card[data-phase='0'] {
+  opacity: 0;
+}
+.Card[data-phase='0'] {
+  z-index: 0;
+}
+.Card[data-phase='1'], .Card[data-phase='2'] {
+  z-index: 1000;
+  top: calc(50vh - var(--height) / 2);
+  left: calc(50vw - var(--width) / 2);
+  --cols: 1;
+}
+.Card[data-phase='1'] {
+  transform: perspective(500px) rotateY(180deg);
+}
+.Card[data-phase='2'] {
+  transform: perspective(500px) rotateY(0deg);
+}
+.Card-Decoration {
+  position: absolute;
+  --delay: calc(var(--gap-absolute) / 4);
+  width: auto;
+  height: auto;
+  top: var(--delay);
+  right: var(--delay);
+  bottom: var(--delay);
+  left: var(--delay);
+  border: calc(var(--gap-absolute) / 16) solid white;
+  border-radius: calc(var(--gap-absolute) / 4);
+  transition: all 1s, visibility 0s linear 0.3s;
+  visibility: hidden;
+}
+.Card[data-phase='1'] > .Card-Decoration {
+  visibility: visible;
+}
+.Card-Label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: calc(var(--gap-absolute)/ var(--gap) * 0.4);
+  line-height: var(--height);
+  color: white;
+  transition: all 1s, visibility 0s linear 0.3s;
+  visibility: visible;
+}
+.Card[data-phase='1'] > .Card-Label {
+  visibility: hidden;
+}

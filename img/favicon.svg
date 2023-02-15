@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="favicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="4.6740695"
+     inkscape:cx="14.655323"
+     inkscape:cy="50.919226"
+     inkscape:window-width="1077"
+     inkscape:window-height="749"
+     inkscape:window-x="26"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid77"
+       spacingx="1.0583333"
+       spacingy="1.0583333"
+       dotted="true"
+       originx="0"
+       originy="0"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#3d3846;stroke-width:0.264583"
+       id="rect232"
+       width="12.7"
+       height="16.933332"
+       x="2.1166666"
+       y="1.7838134e-07"
+       rx="3.175"
+       ry="3.175" />
+    <path
+       id="rect342"
+       style="fill:#f6f5f4;stroke-width:0.264583"
+       d="M 5.2916667 1.0583333 C 4.1190346 1.0583333 3.175 2.0023679 3.175 3.175 L 3.175 13.758333 C 3.175 14.930965 4.1190346 15.875 5.2916667 15.875 L 11.641667 15.875 C 12.814299 15.875 13.758333 14.930965 13.758333 13.758333 L 13.758333 3.175 C 13.758333 2.0023679 12.814299 1.0583333 11.641667 1.0583333 L 5.2916667 1.0583333 z M 5.2916667 2.1166667 L 11.641667 2.1166667 C 12.227983 2.1166667 12.7 2.588684 12.7 3.175 L 12.7 13.758333 C 12.7 14.344649 12.227983 14.816667 11.641667 14.816667 L 5.2916667 14.816667 C 4.7053506 14.816667 4.2333333 14.344649 4.2333333 13.758333 L 4.2333333 3.175 C 4.2333333 2.588684 4.7053506 2.1166667 5.2916667 2.1166667 z " />
+  </g>
+</svg>
