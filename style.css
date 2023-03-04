@@ -7,6 +7,7 @@ body, :root {
 .Root {
   font-family: sans-serif;
   --cols: 4;
+  --animation-duration: 0.75s;
 }
 .Card {
   user-select: none;
@@ -28,7 +29,14 @@ body, :root {
     (var(--width) + var(--gap-absolute)) * var(--col) + var(--gap-absolute)
   );
   opacity: 1;
-  transition: all 1s;
+  transition: transform var(--animation-duration),
+    width var(--animation-duration),
+    height var(--animation-duration),
+    opacity var(--animation-duration),
+    top var(--animation-duration),
+    left var(--animation-duration),
+    z-index var(--animation-duration),
+    border-radius var(--animation-duration);
   transform: perspective(500px) translate3d(0, 0, 0);
 }
 [data-state='1'] .Card[data-phase='0'] {
@@ -60,7 +68,7 @@ body, :root {
   left: var(--delay);
   border: calc(var(--gap-absolute) / 16) solid white;
   border-radius: calc(var(--gap-absolute) / 4);
-  transition: all 1s, visibility 0s linear 0.3s;
+  transition: visibility 0s linear calc(var(--animation-duration) * 0.3);
   visibility: hidden;
 }
 .Card[data-phase='1'] > .Card-Decoration {
@@ -73,7 +81,9 @@ body, :root {
   font-size: calc(var(--gap-absolute)/ var(--gap) * 0.4);
   line-height: var(--height);
   color: white;
-  transition: all 1s, visibility 0s linear 0.3s;
+  transition: font-size var(--animation-duration),
+    line-height var(--animation-duration),
+    visibility 0s linear calc(var(--animation-duration) * 0.3);
   visibility: visible;
 }
 .Card[data-phase='1'] > .Card-Label {
