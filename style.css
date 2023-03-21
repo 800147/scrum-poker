@@ -89,3 +89,15 @@ body, :root {
 .Card[data-phase='1'] > .Card-Label {
   visibility: hidden;
 }
+
+.AboutLink, .AboutLink:visited {
+  color: grey;
+  position: fixed;
+  bottom: 0.25em;
+  left: 0.25em;
+  opacity: 0;
+  transition: opacity var(--animation-duration);
+}
+[data-state='0'] .AboutLink {
+  opacity: 1;
+}

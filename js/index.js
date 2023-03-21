@@ -46,7 +46,7 @@ const cols = Math.ceil(Math.sqrt(cards.length));
 const rows = Math.ceil(cards.length / cols);
 const firstRowPosition = (cols - rows) / 2;
 
-const root = __('div', { className: 'Root', dataset: { state: 5 }, style: `--cols: ${cols};` });
+const root = __('div', { className: 'Root', dataset: { state: READY_STATE }, style: `--cols: ${cols};` });
 document.addEventListener('DOMContentLoaded', () => document.body.appendChild(root), false);
 
 for (let row = 0; row < rows; row++) {
@@ -61,3 +61,5 @@ for (let row = 0; row < rows; row++) {
     root.appendChild(Card(cards[row * cols + col], firstRowPosition + row, firstCardPosition + col));
   }
 }
+
+root.appendChild(__('a', { className: 'AboutLink', href: './about'}, 'about'));
