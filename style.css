@@ -101,3 +101,23 @@ body, :root {
 [data-state='0'] .AboutLink {
   opacity: 1;
 }
+
+.FullscreenButton {
+  appearance: none;
+  display: inline;
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
+  text-decoration: underline;
+
+  color: grey;
+  position: fixed;
+  bottom: 0.25em;
+  right: 0.25em;
+  opacity: 0;
+  transition: opacity var(--animation-duration);
+}
+[data-state='0'] .FullscreenButton {
+  opacity: 1;
+}
